@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snowpizza - Login/Sign Up</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            animation: ledAnimation 5s infinite alternate;
+        }
+
+    
+
+        #login-container, #signup-container {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+            display: none;
+        }
+
+        #login-container.active, #signup-container.active {
+            display: block;
+        }
+
+        @keyframes ledAnimation {
+            0% {
+                background: linear-gradient(45deg, #5d5871, #ff5500);
+            }
+            25% {
+                background: linear-gradient(45deg, #ff5500, #f5deaf);
+            }
+            50% {
+                background: linear-gradient(45deg, #ffaa00, #eaf9cb);
+            }
+            75% {
+                background: linear-gradient(45deg, rgb(214, 95, 230)), #2c312a);
+            }
+            100% {
+                background: linear-gradient(45deg, #00b3ff, #c9ebc9);
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border: 1px solid #00ff00;
+        }
+
+        button {
+            background: linear-gradient(45deg, #00ff00, #55ff00);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #55ff00, #00ff00);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #toggle-btn {
+            background: none;
+            border: none;
+            color: #333;
+            text-decoration:none;
+            cursor: pointer;
+        }
+        a{
+  text-decoration: none;
+}
+    </style>
+</head>
+
+<body>
+
+    <div id="login-container" class="active">
+        <h1 style="color: #333;">snowPiZZa</h1>
+        <form id="login-form">
+            <label for="login-username" style="color: #333;">Username:</label>
+            <input type="text" id="login-username" name="login-username" placeholder="username" required>
+
+            <label for="login-password" style="color: #333;">Password:</label>
+            <input type="password" id="login-password" name="login-password" placeholder="password" required>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <p>Don't have an account? <button id="toggle-btn">Sign Up</button></p>
+    </div>
+
+    <div id="signup-container">
+        <h1 style="color: #333;">snowPiZZa</h1>
+        <form id="signup-form">
+            <label for="signup-username" style="color: #333;">Username:</label>
+            <input type="text" id="signup-username" name="signup-username" placeholder="username" required>
+
+            <label for="signup-password" style="color: #333;">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" placeholder="password" required>
+
+            <button type="button" onclick="signup()">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        var currentSlide = 0;
+        var slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000); 
+
+        document.getElementById('toggle-btn').addEventListener('click', function () {
+            document.getElementById('login-container').classList.toggle('active');
+            document.getElementById('signup-container').classList.toggle('active');
+        });
+
+        function signup() {
+            var signupUsername = document.getElementById('signup-username').value;
+            var signupPassword = document.getElementById('signup-password').value;
+
+            
+            if (!signupUsername || !signupPassword) {
+                alert("Please fill in all fields for signup.");
+                return;
+            }
+
+          
+            localStorage.setItem('user', JSON.stringify({
+                username: signupUsername,
+                password: signupPassword
+            }));
+
+          
+            document.getElementById('login-container').classList.add('active');
+            document.getElementById('signup-container').classList.remove('active');
+        }
+
+        function login() {
+            var loginUsername = document.getElementById('login-username').value;
+            var loginPassword = document.getElementById('login-password').value;
+
+            
+            if (!loginUsername || !loginPassword) {
+                alert("Please fill in all fields for login.");
+                return;
+            }
+
+            
+            var savedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (!savedUser || loginUsername !== savedUser.username || loginPassword !== savedUser.password) {
+                alert("Invalid username or password. Please try again.");
+                return;
+            }
+
+           
+            window.location.href = "HTML.html";
+        }
+    </script>
+</body>
+
+</html>

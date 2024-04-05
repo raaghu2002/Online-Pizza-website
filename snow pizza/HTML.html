@@ -1,0 +1,358 @@
+<html>
+<head>
+  <title>snowPiZZa</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="website icon" href="https://thumbs.dreamstime.com/b/pizza-text-written-red-grungy-zig-zag-borders-round-stamp-pizza-text-written-red-grungy-round-stamp-242673999.jpg">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="#">snowPiZZa</a></div>
+    <div class="menu">
+      <a href="#">
+        <ion-icon name="close" class="close"></ion-icon>
+      </a>
+
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+        <li><a href="#" class="under">SHOP</a></li>
+        <li><a href="#" class="under">OUR MENU</a></li>
+        <li><a href="#" class="under">CONTACT US</a></li>
+        <li><a href="#" class="under">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="search">
+
+      <input type="text" placeholder="search" id="input">
+        <ion-icon class="s" name="search"></ion-icon>
+      
+    </div>
+    <div class="heading">
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+        <li><a href="#" class="under">SHOP</a></li>
+        <li><a href="#" class="under">OUR MENU</a></li>
+        <li><a href="#" class="under">CONTACT US</a></li>
+        <li><a href="#" class="under">ABOUT US</a></li>
+        <li><a href="#" class="under" onclick="showCart()">CART</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header></br></br>
+  <section>
+    <div class="section">
+      <div class="section1">
+        <div class="img-slider">
+          <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" class="img">
+          <img
+            src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" class="img">
+          <img
+            src="https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" class="img">
+          <img
+            src="https://images.unsplash.com/photo-1561350111-7daa4f284bc6?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" class="img">
+          <img
+            src="https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?q=80&w=1764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" class="img">
+        </div>
+
+      </div></br></br>
+      <div class="section2">
+        <div class="container">
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg"
+                alt=""></div>
+            <div class="name">Cheese Pizza</div>
+            <div class="price">₹250</div>
+            <div class="info">Cheese pizza  choices.</div></br>
+            <center><button onclick="addToCart('Cheese Pizza', 250)">Add to Cart</button></center>
+            
+          </div>
+          <div class="items">
+            <div class="img img2"><img
+                src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg"
+                alt=""></div>
+            <div class="name">Veggie Pizza
+            </div>
+            <div class="price">₹160</div>
+            <div class="info">onions make for exciting.</div></br>
+            <center><button onclick="addToCart('Veggie Pizza', 160)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img3"><img
+                src="https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191_1280.jpg"
+                alt=""></div>
+            <div class="name">Pepperoni Pizza</div>
+            <div class="price">₹99</div>
+            <div class="info">salty round of pepperoni.</div></br>
+            <center><button onclick="addToCart('Mexican Fiesta', 400)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2016/03/05/09/22/eat-1237431_1280.jpg"
+                alt=""></div>
+            <div class="name">Meat Pizza</div>
+            <div class="price">₹120</div>
+            <div class="info"> Pile on ground a hearty meal.</div>
+            <center><button onclick="addToCart('Pepperoni Pizza', 120)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2016/11/29/13/02/cheese-1869708_1280.jpg"
+                alt=""></div>
+            <div class="name">Margherita Pizza
+            </div>
+            <div class="price">₹145</div>
+            <div class="info">one of the most popular .</div></br>
+            <center><button onclick="addToCart('Margherita Pizza', 145)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2017/09/30/15/10/plate-2802332_1280.jpg"
+                alt=""></div>
+            <div class="name"> BBQ Chicken Pizza
+            </div>
+            <div class="price">₹70</div>
+            <div class="info"> sweet flavor be beaten.</div></br>
+            <center><button onclick="addToCart('BBQ Chicken Pizza',70)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2021/07/19/16/04/pizza-6478478_1280.jpg"
+                alt=""></div>
+            <div class="name">Hawaiian Pizza</div>
+            <div class="price">₹89</div>
+            <div class="info">solid sweet type of pizza.</div></br>
+            <center><button onclick="addToCart('Hawaiian Pizza', 89)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2017/02/15/10/57/pizza-2068272_1280.jpg"
+                alt=""></div>
+            <div class="name">cheese Pizza</div>
+            <div class="price">₹260</div>
+            <div class="info">All its spicy, salty, for pizza.</div></br>
+            <center><button onclick="addToCart('cheese Pizza', 260)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2016/07/26/16/23/pizza-1543198_1280.jpg"
+                alt=""></div>
+            <div class="name">Supreme Pizza</div>
+            <div class="price">₹240</div>
+            <div class="info">it’s the combination it sing.</div></br>
+            <center><button onclick="addToCart('Supreme Pizza', 240)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2013/07/18/20/24/cheese-164872_1280.jpg"
+                alt=""></div>
+            <div class="name">The Works Pizza</div>
+            <div class="price">₹199</div>
+            <div class="info">plus bacon and pepperoni.</div></br>
+            <center><button onclick="addToCart('The Works Pizza', 199)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_1280.png" alt="">
+            </div>
+            <div class="name">Margherita pizza</div>
+            <div class="price">₹99</div>
+            <div class="info">salty combination type of pizza.</div>
+            <center><button onclick="addToCart('Margherita pizza', 99)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2016/04/21/22/50/pizza-1344720_1280.jpg"
+                alt=""></div>
+            <div class="name">Pepperoni pizza</div>
+            <div class="price">₹180</div>
+            <div class="info">one of the most popular pizza.</div>
+            <center><button onclick="addToCart('Pepperoni pizza', 180)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2015/12/07/22/27/pizza-1081534_1280.jpg"
+                alt=""></div>
+            <div class="name">Hawaiian pizza</div>
+            <div class="price">₹89</div>
+            <div class="info"> on flavor or nutrition.   </div></br>
+            <center><button onclick="addToCart('Hawaiian pizza', 89)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2017/10/02/22/24/pizza-2810589_1280.jpg" alt="">
+            </div>
+            <div class="name">Italian pizza</div>
+            <div class="price">₹199</div>
+            <div class="info">sweetness with their savory toppings.</div>
+            <center><button onclick="addToCart('Italian pizza', 199)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2015/04/28/21/20/pizza-744405_1280.jpg"
+                alt=""></div>
+            <div class="name">Sicilian pizza</div>
+            <div class="price">₹250</div>
+            <div class="info">tomato and mozzarella cheese. .</div>
+            <center><button onclick="addToCart('Sicilian pizza', 250)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2017/06/07/10/53/pizza-2380025_1280.jpg"
+                alt=""></div>
+            <div class="name">Tomato pizza</div>
+            <div class="price">₹180</div>
+            <div class="info">it a unique flavor.</div></br>
+            <center><button onclick="addToCart('Tomato pizza', 180)">Add to Cart</button></center>
+          </div>
+          <div class="items">
+            <div class="img img1"><img
+                src="https://cdn.pixabay.com/photo/2017/01/22/19/12/pizza-2000600_1280.jpg"
+                alt=""></div>
+            <div class="name">Onion pizza</div>
+            <div class="price">₹160</div>
+            <div class="info">slices of spicy pepperoni sausage.</div>
+            <center><button onclick="addToCart('Onion pizza', 160)">Add to Cart</button></center>
+          </div>
+          
+        </div>
+        <div class="section3">
+          <div class="container">
+          <div class="items">
+            <div class="img img1"><img
+              src="https://i.pinimg.com/736x/47/fb/52/47fb5207c336e7f89206318aa1cb8024.jpg"
+              alt=""></div>
+            <center><div><aside class="cart">
+              <div class="name">Cart</div>
+              <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+              </ul>
+              <div class="info"><p>Total: <span id="total">0</span> Rupees</p></div></br>
+              <button onclick="checkout()">Checkout</button>
+            </aside></div></center>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    
+  <script>
+    let cart = [];
+    let total = 0;
+  
+    function addToCart(pizzaName, price) {
+      // Check if the pizza is already in the cart
+      const existingPizza = cart.find(item => item.name === pizzaName);
+      if (existingPizza) {
+        // Increment quantity if the same pizza is selected again
+        existingPizza.quantity++;
+      } else {
+        // Add the pizza to the cart with quantity 1 if it's a new selection
+        cart.push({ name: pizzaName, price: price, quantity: 1 });
+      }
+      updateCart();
+    }
+  
+    function updateCart() {
+      const cartList = document.getElementById('cart-items');
+      cartList.innerHTML = '';
+      total = 0;
+  
+      cart.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.name} x${item.quantity}: ${item.price * item.quantity} Rupees`;
+        cartList.appendChild(listItem);
+        total += item.price * item.quantity;
+      });
+  
+      document.getElementById('total').textContent = total;
+    }
+  
+    function checkout() {
+      // Implement checkout functionality, e.g., sending order details to a server
+      alert(`Total amount: ${total} Rupees. Order placed!`);
+      cart = [];
+      total = 0;
+      updateCart();
+    }
+  
+  </script>
+
+  </section>
+
+</br></br>
+  
+  <footer>
+    <div class="footer0">
+      <h1>snowPiZZa</h1>
+    </div>
+    <div class="footer1 ">
+      Connect with us at<div class="social-media">
+        <a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <div class="footer2">
+      <div class="product">
+        <div class="heading">Products</div>
+        <div class="div">Oven Tools</div>
+        <div class="div">Dough Cutters</div>
+        <div class="div"> Screens & Disks</div>
+        <div class="div">Delivery Bags</div>
+
+      </div>
+      <div class="services">
+        <div class="heading">Services</div>
+        <div class="div">Return</div>
+        <div class="div">Cash Back</div>
+        <div class="div">Home delivery</div>
+        <div class="div">Others</div>
+      </div>
+      <div class="Company">
+        <div class="heading">Company</div>
+        <div class="div">Mojo Pizza</div>
+        <div class="div">Pinoz Pizza </div>
+        <div class="div">Chicago Pizza</div>
+        <div class="div">Eatfit Pizza</div>
+      </div>
+      <div class="Get Help">
+        <div class="heading">Get Help</div>
+        <div class="div">Help Center</div>
+        <div class="div">Privacy Policy</div>
+        <div class="div">Terms</div>
+        <div class="div">Login</div>
+      </div>
+    </div>
+    <div class="footer3">Copyright © <h4>snowPiZZa</h4> 2021-2028</div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
